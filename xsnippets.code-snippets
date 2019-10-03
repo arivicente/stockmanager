@@ -1,0 +1,230 @@
+{
+	// ====================================================================================================
+	// João Ribeiro - versão (v1.0.0 - 27-03-2018) ========================================================
+	// ====================================================================================================
+	
+	// ====================================================================================================
+	// PHP ================================================================================================
+	// ====================================================================================================
+	
+	"Tags de PHP multi-linha": {
+		"scope": "php,html",
+		"prefix": "xphp1",
+		"body": [
+			"<?php",
+			"\t$1",
+			"?>"
+		],
+		"description": "PHP - Tags em multi-linha."
+	},
+	"Tags de PHP linha única": {
+		"scope": "php,html",
+		"prefix": "xphp2",
+		"body": [
+			"<?php $1 ?>"
+		],
+		"description": "PHP -Tags em linha única."
+	},
+	"Tags PHP com echo": {
+		"scope": "php,html",
+		"prefix": "xphp_echo",
+		"body": [
+			"<?php echo $1 ?>",			
+		],
+		"description": "PHP - Tags em linha com echo."
+	},
+	"Comentário de PHP": {
+		"scope": "php,html",
+		"prefix": "xphp_com1",
+		"body": [
+			"// ==================================================",
+			"// ${1:descrição}",
+			"// ==================================================",
+		],
+		"description": "PHP - Comentário em multipla linha com descrição."
+	},
+	"Comentário de PHP (1 linha)": {
+		"scope": "php,html",
+		"prefix": "xphp_com2",
+		"body": [
+			"// ==================================================",			
+		],
+		"description": "PHP - Comentário em uma linha."
+	},
+	"Comentário de HTML": {
+		"scope": "php,html",
+		"prefix": "xhtml_com1",
+		"body": [
+			"<!-- ${1:descrição} -->",			
+		],
+		"description": "HTML - Comentário em uma linha."
+	},
+
+
+
+
+	// ====================================================================================================
+	// Bootstrap ==========================================================================================
+	// ====================================================================================================
+	"Bootstrap - DIV com container-fluid": {
+		"scope": "php,html",
+		"prefix": "xboot_container_fluid",
+		"body": [
+			"<div class=\"container-fluid\">",
+			"\t$1",
+			"</div>"			
+		],
+		"description": "Bootstrap - Container-fluid."
+	},
+	"Bootstrap - DIV com container": {
+		"scope": "php,html",
+		"prefix": "xboot_container",
+		"body": [
+			"<div class=\"container\">",
+			"\t$1",
+			"</div>"			
+		],
+		"description": "Bootstrap - Container."
+	},
+	"Bootstrap - Row": {
+		"scope": "php,html",
+		"prefix": "xboot_row",
+		"body": [
+			"<div class=\"row\">",
+			"\t$1",
+			"</div>"			
+		],
+		"description": "Bootstrap - Row."
+	},
+	"Bootstrap - Row com 2 cols": {
+		"scope": "php,html",
+		"prefix": "xboot_row_2cols",
+		"body": [
+			"<div class=\"row\">",			
+			"\t<div class=\"col-$1\">",
+			"\t</div>",
+			"\t<div class=\"col-$1\">",
+			"\t</div>",
+			"</div>",
+		],
+		"description": "Bootstrap - Row com 2 colunas."
+	},
+	"Bootstrap - Row com 3 cols": {
+		"scope": "php,html",
+		"prefix": "xboot_row_3cols",
+		"body": [
+			"<div class=\"row\">",			
+			"\t<div class=\"col-$1\">",
+			"\t</div>",
+			"\t<div class=\"col-$1\">",
+			"\t</div>",
+			"\t<div class=\"col-$1\">",
+			"\t</div>",
+			"</div>",
+		],
+		"description": "Bootstrap - Row com 3 colunas."
+	},
+	"Bootstrap - Row com 4 cols": {
+		"scope": "php,html",
+		"prefix": "xboot_row_4cols",
+		"body": [
+			"<div class=\"row\">",			
+			"\t<div class=\"col-$1\">",
+			"\t</div>",
+			"\t<div class=\"col-$1\">",
+			"\t</div>",
+			"\t<div class=\"col-$1\">",
+			"\t</div>",
+			"\t<div class=\"col-$1\">",
+			"\t</div>",
+			"</div>",
+		],
+		"description": "Bootstrap - Row com 4 colunas."
+	},
+
+
+	// --------------------------------------------------
+	// Bootstrap - formulários
+	"Bootstrap - Input text": {
+		"scope": "php,html",
+		"prefix": "xboot_input_text",
+		"body": [
+			"<div class=\"form-group\">",
+			"\t<label>${1:designação}</label>",
+			"\t<input type=\"text\" class=\"form-control\" name=\"${2:nome}\">",
+			"</div>"
+		],
+		"description": "Bootstrap - Input de texto."
+	},
+	
+
+
+
+
+
+
+	// ====================================================================================================
+	// CodeIgniter ========================================================================================
+	// ====================================================================================================
+	"CodeIgniter - Controle de acesso BASEPATH":{
+		"prefix": "xci_inicio",
+		"body":[
+			"<?php",
+			"\tdefined('BASEPATH') OR exit('URL inválida.');",
+			"",
+			"\t$1",
+			"",
+			"?>"
+		],
+		"description": "CodeIgniter - Tags PHP e Defined('BASEPATH')"
+	},	
+	"CodeIgniter - View":{
+		"prefix": "xci_view",
+		"body":[
+			"<?php",
+			"\tdefined('BASEPATH') OR exit('URL inválida.');",			
+			"?>",
+			"$1",
+		],
+		"description": "CodeIgniter - View"
+	},
+	"CodeIgniter - Controller":{
+		"prefix": "xci_controller",
+		"body":[
+			"<?php",
+			"\tdefined('BASEPATH') OR exit('URL inválida.');",
+			"\t",
+			"\tclass ${1:Nome} extends CI_Controller{",
+			"\t",
+			"\t\t$2",
+			"\t",
+			"\t}",
+			"?>"
+		],
+		"description": "CodeIgniter - Controller"
+	},
+	"CodeIgniter - Model":{
+		"prefix": "xci_model",
+		"body":[
+			"<?php",
+			"\tdefined('BASEPATH') OR exit('URL inválida.');",
+			"\t",
+			"\tclass ${1:Nome} extends CI_Model{",
+			"\t",
+			"\t\t$2",
+			"\t",
+			"\t}",
+			"?>"
+		],
+		"description": "CodeIgniter - Model"
+	},
+	"CodeIgniter - Function":{
+		"prefix": "xci_function",
+		"body":[			
+			"public function ${1:Nome}(){",
+			"\t$2",
+			"}",
+		],
+		"description": "CodeIgniter - Função"
+	},
+}
