@@ -1,7 +1,5 @@
 <?php
-    
     defined('BASEPATH') OR exit('No direct script access allowed');
-
 ?>
 
 <!DOCTYPE html>
@@ -21,7 +19,5 @@
     <!-- CSS -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/main.css'); ?>">
 
-
 </head>
 <body>
-    
